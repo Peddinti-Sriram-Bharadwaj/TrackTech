@@ -28,14 +28,15 @@ const Bottom = ({ state }) => {
     };
 
     return (
-        <>
-        <div>
-            <Bar data={chartData} options={chartOptions} />
+        <div style = {{ display: 'flex'}}>
+        <div style={{ border: '3px solid',  width: '50%' }}>
+            <Bar data={chartData} options={chartOptions} style = {{height:'70%', width: '70%'}} />
+        </div >
+
+        <div style={{ border: '3px solid',  width: '50%' }}>
+            <Doughnut data={chartData} style = {{height:'70%', width: '70%'}}/>
         </div>
-        <div>
-        <Doughnut data={chartData} />
-    </div>
-        </>
+        </div>
         
     );
 };
